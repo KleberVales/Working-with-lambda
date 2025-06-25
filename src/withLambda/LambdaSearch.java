@@ -1,6 +1,8 @@
+package withLambda;
+
 import java.util.*;
 
-public class TraditionalSearch {
+public class LambdaSearch {
     public static void main(String[] args) {
         var animals = new ArrayList<Animal>();
         animals.add(new Animal("fish", false, true));
@@ -8,8 +10,12 @@ public class TraditionalSearch {
         animals.add(new Animal("rabbit", true, false));
         animals.add(new Animal("turtle", false, true));
 
-        // Usando a classe concreta
-        print(animals, new CheckIfHopper());
+        // Usando lambda para filtrar animais que pulam
+        print(animals, a -> a.canHop());
+
+        // Outros exemplos (opcional):
+        // print(animals, a -> a.canSwim()); // animais que nadam
+        // print(animals, a -> !a.canSwim()); // animais que NÃO nadam
     }
 
     private static void print(List<Animal> animals, CheckTrait checker) {
@@ -20,3 +26,4 @@ public class TraditionalSearch {
         }
     }
 }
+

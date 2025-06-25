@@ -1,0 +1,5 @@
+package traditional;
+
+public interface CheckTrait {
+    boolean test(Animal a);
+}
