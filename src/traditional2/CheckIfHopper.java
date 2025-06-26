@@ -1,9 +1,8 @@
 package traditional2;
 
-public class CheckIfHopper implements CheckTrait{
-
-    @Override
+public class CheckIfHopper implements CheckTrait {
     public boolean test(Animal a){
-        return a.canHop();
+
+        return a.canhop();
     }
 }

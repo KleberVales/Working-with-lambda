@@ -1,3 +1,4 @@
 package traditional2;
 
-public record Animal(String species, boolean canHop, boolean canSwin) { }
+public record Animal(String species, boolean canhop, boolean canSwim) {
+}
